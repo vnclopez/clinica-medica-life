@@ -1,0 +1,145 @@
+.secao-inicio {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secao-inicio h1 {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.links-navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.links-navegacao a {
+    text-decoration: none;
+    color: #777;
+    border-bottom: 2px solid #00cad1;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.links-navegacao a:hover {
+    color: #02b6bf;
+}
+
+.especialidade {
+    margin-top: 40px;
+}
+
+.especialidade h2 {
+    font-size: 18px;
+}
+
+.descricao-especialidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.descricao-especialidade p {
+    width: 540px;
+}
+
+.horarios {
+    display: flex;
+    height: 250px;
+    margin: 0 20px;
+}
+
+.horarios img,
+.horarios table {
+    height: 100%;
+}
+
+.horarios img {
+    width: 30%;
+    object-fit: cover;
+}
+
+.horarios table {
+    width: 70%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.horarios thead tr {
+    background-color: #00cad1;
+    color: #fff;
+}
+
+th{
+    height: 45px;
+}
+
+th,
+td {
+    padding: 0 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #cdcdcd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/*=========================================== MEDIA-QUERIES =================================*/
+@media (max-width: 425px) {
+
+    .descricao-especialidade p {
+        width: 91%;
+    }
+
+    .horarios {
+        margin: 0;
+    }
+
+    /* fim de (max-width: 425px) */
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .descricao-especialidade p {
+        width: 72%;
+    }
+
+    /* fim de (min-width: 426px) and (max-width: 768px) */
+}
+
+@media (max-width: 768px) {
+
+    .links-navegacao {
+        gap: 10px;
+        margin: 20px 20px 30px;
+    }
+
+    .links-navegacao a {
+        margin: 0 5px;
+    }
+
+    .secao-inicio {
+        height: auto;
+    }
+
+    .horarios img {
+        display: none;
+    }
+
+    .horarios table {
+        width: 100%;
+    }
+
+    /* fim de (max-width: 768px) */
+}

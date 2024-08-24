@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.largura-limitada {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.flex-coluna-centralizada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.topo-conteudo img,
+.rodape-conteudo img {
+    width: 120px;
+}
+
+/*=========================================== TOPO =================================*/
+header {
+    background-color: #00cad1;
+}
+
+.topo-conteudo {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-topo {
+    padding: 10px;
+}
+
+.links-topo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.links-topo a:hover {
+    color: #000;
+}
+
+/*=========================================== MAIN =================================*/
+main {
+    color: #777;
+}
+
+.secao-capa {
+    width: 100%;
+    height: 500px;
+    background-image: url('../assets/recepcao.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.secao-capa-titulo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.secao-capa h1 {
+    color: #fff;
+    font-weight: normal;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding-bottom: 30px;
+}
+
+.sobre-descricao {
+    margin-top: 20px;
+}
+
+.sobre-descricao-intro {
+    width: 55%;
+    height: 150px;
+    gap: 20px;
+    text-align: center;
+}
+
+.sobre-descricao-lista {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-descricao-lista div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.sobre-descricao-lista h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+}
+
+.sobre-especialidades {
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sobre-especialidades-texto {
+    width: 55%;
+    text-align: center;
+    gap: 20px;
+}
+
+.sobre-especialidades-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sobre-especialidades-galeria figure {
+    width: calc((100% / 3) - 60px);
+    box-shadow: -1px 0 5px 3px #bbb;
+}
+
+.sobre-especialidades-galeria img {
+    width: 100%;
+}
+
+.sobre-especialidades-galeria figcaption {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sobre-especialidades a {
+    text-decoration: none;
+    background-color: #00cad1;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.contato-conteudo div {
+    width: 60%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contato-conteudo p {
+    margin-bottom: 20px;
+}
+
+/*=========================================== RODAPÉ =================================*/
+footer {
+    margin-top: 60px;
+    background-color: #0c6e71;
+    color: #fff;
+}
+
+.rodape-conteudo {
+    height: 230px;
+    text-align: center;
+}
+
+.rodape-conteudo p {
+    margin: 10px 0;
+}
+
+
+/*=========================================== MEDIA-QUERIES =================================*/
+
+@media (max-width: 425px) {
+    .topo-conteudo {
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .links-topo {
+        border-top: 2px solid #02b6bf;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .secao-capa {
+        height: 200px;
+    }
+
+    .secao-capa h1 {
+        font-size: 26px;
+    }
+
+    .sobre-descricao-intro,
+    .sobre-descricao-lista {
+        width: 95%;
+    }
+
+    .sobre-especialidades-galeria figure {
+        width: 80%;
+    }
+
+    .sobre-especialidades-texto,
+    .contato-conteudo div {
+        width: 90%;
+    }
+
+    /* fim de (max-width: 425px) */
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .secao-capa {
+        height: 300px;
+    }
+
+    .sobre-descricao-intro {
+        width: 79%;
+    }
+
+    .sobre-descricao-lista {
+        width: 100%;
+    }
+
+    .sobre-especialidades-texto {
+        width: 80%;
+    }
+
+    .sobre-especialidades-galeria figure {
+        width: calc((100% / 2) - 60px);
+    }
+
+    .contato-conteudo div {
+        width: 78%;
+    }
+
+    /* fim de (min-width: 426px) and (max-width: 768px) */
+}
+
+@media (max-width: 768px) {
+    .sobre-descricao {
+        margin: 10px 0 50px;
+        gap: 20px;
+    }
+
+    .sobre-descricao-lista {
+        justify-content: center;
+    }
+
+    .sobre-descricao-lista figure {
+        display: none;
+    }
+
+    .sobre-especialidades {
+        height: auto;
+        gap: 30px;
+    }
+
+    .sobre-especialidades-galeria {
+        flex-wrap: wrap;
+    }
+
+    .contato-conteudo {
+        margin-top: 30px;
+    }
+
+    .rodape-conteudo {
+        width: 95%;
+    }
+
+    /* fim de (max-width: 768px) */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .secao-capa {
+        height: 400px;
+    }
+
+    .sobre-descricao-lista {
+        width: 560px;
+    }
+
+    .sobre-descricao-intro,
+    .sobre-especialidades-texto,
+    .contato-conteudo div {
+        width: 600px;
+    }
+
+    /* fim de (min-width: 769px) and (max-width: 1024px) */
+}
+
+@media (max-width: 1024px) {
+    .contato-conteudo iframe {
+        width: 90%;
+    }
+
+    /* fim de (max-width: 1024px) */
+}
